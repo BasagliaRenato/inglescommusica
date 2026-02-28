@@ -76,6 +76,7 @@ body{
     transition: all ease 0.2s;
 }
 .footer{
+    background: var(--bg-dark);
     bottom: 0;
     position: fixed;
     width: 100%;
@@ -96,3 +97,34 @@ body{
 .fa-user{
     color: var(--bg-light);
 }
+
+.content{
+    
+    align-items: center;
+    padding-top: 115px;   
+    padding-bottom: 60px; 
+    display: flex;
+    flex-direction: column;
+    gap: 200px;
+}
+
+.music-card{
+    height: 120px;
+    width: 120px;
+    margin: 0 15px;
+    border-radius: 12px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.red{ background: red; margin-top: 50px; }
+.blue{ background: blue; }
+.green{ background: green; }
+.purple{ background: purple; }
+.orange{ background: orange; }
