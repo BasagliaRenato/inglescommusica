@@ -128,3 +128,14 @@ body{
 .green{ background: green; }
 .purple{ background: purple; }
 .orange{ background: orange; }
+.pink{ background: pink; margin-bottom: 50px;}
+
+.chapter{
+    margin: 20px 15px;
+    font-size: 20px;
+    font-weight: bold;
+
+}
+.bottom h1{
+    transition: opacity 0.2s ease;
+}
