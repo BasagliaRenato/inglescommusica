@@ -143,3 +143,8 @@ body{
     transform: scale(1.05);
     transition: all ease 0.3s;
 }
+.divisor{
+    height: 3px;
+    width: 100%;
+    background: var(--bg);
+}
