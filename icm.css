@@ -63,18 +63,24 @@ body{
     justify-content: center;
     align-items: center;
     gap: 4px;
+
 }
 
 .menu span{
     width: 18px;
     height: 3px;
-    background: var(--text);
+    background: var(--bg-light);
     border-radius: 2px;
+    
 }
 .menu:active{
     transform: scale(1.1);
     transition: all ease 0.2s;
 }
+.menu.active span{
+    background-color: var(--text);
+}
+
 .footer{
     background: var(--bg-dark);
     bottom: 0;

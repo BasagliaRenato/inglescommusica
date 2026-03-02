@@ -16,3 +16,8 @@ window.addEventListener("scroll", () => {
 
     headerTitle.textContent = currentChapter;
 });
+const menuButton = document.querySelector(".menu");
+
+menuButton.addEventListener("click", () => {
+    menuButton.classList.toggle("active");
+});
