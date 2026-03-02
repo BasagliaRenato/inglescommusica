@@ -14,7 +14,10 @@
         <img src="images/bandeira.webp" alt="us" id="flag">
     </div>
     <div class="bottom">
-        <h1 id="titulo">Capítulo I</h1>
+        <div>
+        <h1 id="titulo">Capítulo</h1>
+        <b><p id="musica">Musica</p></b>
+        </div>
         <div class="menu">
             <span></span>
             <span></span>
@@ -22,10 +25,15 @@
         </div>
     </div>
 </header>
+<button class="btn-voltar" onclick="history.back()">
+    <i class="fa-solid fa-circle-left" style="font-size: 30px;"></i>
+</button>
 <footer class="footer">
         <div class="icons">
-            <i class="fa-solid fa-house" style="font-size: 30px;"></i>
+
+           <a href="icm.html"> <i class="fa-solid fa-house" style="font-size: 30px;"></i> </a>      
             <i class="fa-solid fa-user" style="font-size: 30px;"></i>
+            
         </div>
     </footer>
 
@@ -34,13 +42,16 @@ const params = new URLSearchParams(window.location.search);
 const id = params.get("id");
 
 if(id == 1){
-    document.getElementById("titulo").innerText = "Musica I";
+    document.getElementById("titulo").innerText = "Capitulo I";
+    document.getElementById("musica").innerText = "Musica I";
 }
 if(id == 2){
-    document.getElementById("titulo").innerText = "Musica II";
+    document.getElementById("titulo").innerText = "Capitulo I";
+    document.getElementById("musica").innerText = "Musica II";
 }
 if(id == 3){
-    document.getElementById("titulo").innerText = "Musica III";
+    document.getElementById("titulo").innerText = "Capitulo I";
+    document.getElementById("musica").innerText = "Musica III";
 }
 
 </script>

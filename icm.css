@@ -127,6 +127,7 @@ body{
     color: white;
     font-size: 20px;
     font-weight: bold;
+    box-shadow: 3px 4px 0 #161c2e;
 }
 
 .red{ background: red; margin-top: 50px; }

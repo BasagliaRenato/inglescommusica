@@ -49,6 +49,10 @@ body{
     font-size: 22px;
     margin: 0;
 }
+.bottom p{
+    font-size: 12px;
+    margin: 0;
+}
 
 .menu{
     width: 40px;
@@ -95,9 +99,38 @@ body{
     border-top: 3px solid var(--bg);
 }
 .fa-solid{
-    color: var(--text);
+    color: var(--bg-light);
 }
 .fa-user{
     color: var(--bg-light);
+}
+.btn-voltar {
+    position: absolute;
+    top: 115px;
+    left: 0;
+
+    width: 60px;
+    height: 60px;
+
+    background-color: #1f2a44; 
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+}
+
+.btn-voltar i {
+    color: var(--text);
+    font-size: 22px;
+}
+.btn-voltar:active{
+    transform: scale(1.1);
+    transition: all ease 0.2s;
+}
+.fa-user:active, .fa-house:active{
+    transform: scale(1.1);
+    transition: all ease 0.2s;
 }
 
