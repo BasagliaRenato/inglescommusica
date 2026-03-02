@@ -122,7 +122,7 @@ body{
 }
 
 .btn-voltar i {
-    color: var(--text);
+    color: var(--bg-light);
     font-size: 22px;
 }
 .btn-voltar:active{
@@ -133,4 +133,37 @@ body{
     transform: scale(1.1);
     transition: all ease 0.2s;
 }
+.container-botao {
+    height: 100vh; 
+    display: flex;
+    justify-content: center; 
+    align-items: center;   
+     
+}
 
+.btn-start {
+    padding: 8px 20px;
+    font-size: 16px;
+    background-color: #5c7ec9;
+    color: white;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    cursor: pointer;
+    font-family: sans-serif;
+}
+
+.btn-start:hover {
+    background-color: #4a6bb3;
+    transition: all ease 0.2s;
+}
+.btn-start:active {
+    transform: scale(1.1);
+    transition: all ease 0.2s;
+}
+.fa-play{
+    color: var(--text);
+}
+.fa-play:active{
+    transform: scale(1.1);
+    transition: all ease 0.2s;
+}
