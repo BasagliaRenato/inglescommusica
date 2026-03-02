@@ -3,12 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>InglesComMusica
-    </title>
-    <link rel="stylesheet" href="icm.css">
+    <title>Lição</title>
+    <link rel="stylesheet" href="licao.css">
     <script src="https://kit.fontawesome.com/9bbeeced25.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    
 </head>
 <body>
     <header class="header">
@@ -16,7 +14,7 @@
         <img src="images/bandeira.webp" alt="us" id="flag">
     </div>
     <div class="bottom">
-        <h1 id="header-title">Capítulo I</h1>
+        <h1 id="titulo">Capítulo I</h1>
         <div class="menu">
             <span></span>
             <span></span>
@@ -24,25 +22,27 @@
         </div>
     </div>
 </header>
-    <main class="content">
-    <a href="licao.html?id=1"><div class="music-card red"></div></a>
-    <a href="licao.html?id=2"><div class="music-card blue"></div></a>
-    <a href="licao.html?id=3"><div class="music-card green"></div></a>
-        <div class="divisor" style="width: 100%; background: #4b65b7; height: 3px;">
-     <h2 class="chapter" data-chapter="Capítulo II"></h2>
-     </div>
-
-    <div class="music-card purple"></div>
-    <div class="music-card orange"></div>
-    <div class="music-card pink"></div>
-</main>
-    <footer class="footer">
+<footer class="footer">
         <div class="icons">
             <i class="fa-solid fa-house" style="font-size: 30px;"></i>
             <i class="fa-solid fa-user" style="font-size: 30px;"></i>
         </div>
     </footer>
-    <script src="icm.js" defer></script>
-</body>
 
+    <script>
+const params = new URLSearchParams(window.location.search);
+const id = params.get("id");
+
+if(id == 1){
+    document.getElementById("titulo").innerText = "Musica I";
+}
+if(id == 2){
+    document.getElementById("titulo").innerText = "Musica II";
+}
+if(id == 3){
+    document.getElementById("titulo").innerText = "Musica III";
+}
+
+</script>
+</body>
 </html>
