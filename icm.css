@@ -22,6 +22,7 @@ body{
     position: fixed;
     width: 100%;
     background: var(--bg-light);
+    z-index: 1000;
 }
 
 .top{
@@ -86,6 +87,7 @@ body{
     bottom: 0;
     position: fixed;
     width: 100%;
+    z-index: 1000;
 }
 .icons{
     height: 45px;
@@ -119,18 +121,16 @@ body{
     width: 120px;
     margin: 0 15px;
     border-radius: 12px;
-
+    border: 1px solid var(--border);
     display: flex;
     align-items: center;
     justify-content: center;
-    border: var(--border) 1px solid;
-    color: white;
-    font-size: 20px;
-    font-weight: bold;
-    box-shadow: 3px 4px 0 #161c2e;
+    position: relative;
+    overflow: hidden;
+
 }
 
-.red{ background: red; margin-top: 50px; }
+.red{ margin-top: 50px; }
 .blue{ background: blue; }
 .green{ background: green; }
 .purple{ background: purple; }
@@ -149,4 +149,35 @@ body{
 .music-card:active{
     transform: scale(1.05);
     transition: all ease 0.3s;
+}
+.music{
+    height: 120px;
+    width: 120px;
+    margin: 0 15px;
+    border-radius: 12px;
+
+     display: flex;
+    align-items: center;
+    justify-content: center;
+    border: var(--border) 1px solid;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.75);
+}
+.lesson-number{
+    position: absolute;
+    top: 8px;
+    left: 8px;
+
+    background: rgba(33, 42, 69, 0.6);
+    color: white;
+
+    font-size: 14px;
+    font-weight: bold;
+
+    padding: 4px 8px;
+    border-radius: 8px;
+
+    z-index: 2;
 }
