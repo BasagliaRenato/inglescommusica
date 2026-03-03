@@ -16,6 +16,7 @@ body{
     background: var(--bg-dark);
     color: var(--text);
     margin: 0;
+    overflow: hidden;
 }
 .header{
     position: fixed;
@@ -191,4 +192,5 @@ body{
     border-radius: 20px;
     object-fit: cover;
      box-shadow: 0 10px 25px rgba(0,0,0,0.75);
+
 }
