@@ -73,7 +73,7 @@ body{
     height: 3px;
     background: var(--bg-light);
     border-radius: 2px;
-    
+
 }
 .menu:active{
     transform: scale(1.1);
@@ -108,7 +108,7 @@ body{
     position: absolute;
     top: 115px;
     left: 0;
-
+    z-index: 1000;
     width: 60px;
     height: 60px;
 
@@ -124,6 +124,7 @@ body{
 .btn-voltar i {
     color: var(--bg-light);
     font-size: 22px;
+    
 }
 .btn-voltar:active{
     transform: scale(1.1);
@@ -133,13 +134,24 @@ body{
     transform: scale(1.1);
     transition: all ease 0.2s;
 }
-.container-botao {
-    height: 100vh; 
+.lesson-center{
     display: flex;
-    justify-content: center; 
-    align-items: center;   
-     
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh); 
+    gap: 30px;
+     transform: translateY(-20px);
 }
+
+#image img{
+    width: 200px;
+    height: 200px;
+    border-radius: 20px;
+    object-fit: cover;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+}
+
 
 .btn-start {
     padding: 8px 20px;
@@ -166,4 +178,17 @@ body{
 .fa-play:active{
     transform: scale(1.1);
     transition: all ease 0.2s;
+}
+#image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.lesson-image{
+    width: 200px;
+    height: 200px;
+    border-radius: 20px;
+    object-fit: cover;
+     box-shadow: 0 10px 25px rgba(0,0,0,0.75);
 }

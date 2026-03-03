@@ -29,10 +29,12 @@
     <i class="fa-solid fa-play" style="font-size: 30px; rotate: 180deg;"></i>
 </button>
 <div>
-<div class="container-botao">
-<button class="btn-start">Começar Lição <i class="fa-solid fa-play"></i>
+<div class="lesson-center">
+    <div id="image"></div>
 
-</button>
+    <button class="btn-start">
+        Começar Lição <i class="fa-solid fa-play"></i>
+    </button>
 </div>
 </div>
 <footer class="footer">
@@ -48,31 +50,52 @@
 const params = new URLSearchParams(window.location.search);
 const id = params.get("id");
 
-if(id == 11){
-    document.getElementById("titulo").innerText = "Capitulo I";
-    document.getElementById("musica").innerText = "Musica I";
-}
-if(id == 12){
-    document.getElementById("titulo").innerText = "Capitulo I";
-    document.getElementById("musica").innerText = "Musica II";
-}
-if(id == 13){
-    document.getElementById("titulo").innerText = "Capitulo I";
-    document.getElementById("musica").innerText = "Musica III";
-}
-if(id == 21){
-    document.getElementById("titulo").innerText = "Capitulo II";
-    document.getElementById("musica").innerText = "Musica I";
-}
-if(id == 22){
-    document.getElementById("titulo").innerText = "Capitulo II";
-    document.getElementById("musica").innerText = "Musica II";
-}
-if(id == 23){
-    document.getElementById("titulo").innerText = "Capitulo II";
-    document.getElementById("musica").innerText = "Musica III";
-}
+const lessons = {
+    11: {
+        titulo: "Like I want you",
+        capitulo: "Capitulo I",
+        imagem: "images/likeiwantyou.jpg"
+    },
+    12: {
+        titulo: "Imagine",
+        capitulo: "Capitulo I",
+        imagem: "images/imagine.jpg"
+    },
+    13: {
+        titulo: "Count on me",
+        capitulo: "Capitulo I",
+        imagem: "images/countonme.jpg"
+    },
+    21: {
+        titulo: "White Ferrari",
+        capitulo: "Capitulo II",
+        imagem: "images/whiteferrari.jpg"
+    },
+    22: {
+        titulo: "Me & U",
+        capitulo: "Capitulo II",
+        imagem: "images/meandu.jpg"
+    },
+    23: {
+        titulo: "Come and See",
+        capitulo: "Capitulo II",
+        imagem: "images/comeandsee.jpg"
+    }
+};
 
+if (lessons[id]) {
+    document.getElementById("titulo").innerText = lessons[id].titulo;
+    document.getElementById("musica").innerText = lessons[id].capitulo;
+
+    document.getElementById("image").innerHTML = `
+        <img src="${lessons[id].imagem}" class="lesson-image">
+    `;
+}
+const menuButton = document.querySelector(".menu");
+
+menuButton.addEventListener("click", () => {
+    menuButton.classList.toggle("active");
+});
 </script>
 </body>
 </html>
