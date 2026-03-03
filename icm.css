@@ -11,6 +11,11 @@
 --warning: #DD6E6E;
 --success: #74DD6E;
 }
+*{
+-webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+}
+
 body{
     margin: 0;
     font-family: sans-serif;
@@ -181,3 +186,4 @@ body{
 
     z-index: 2;
 }
+
