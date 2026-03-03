@@ -21,6 +21,8 @@ body{
     font-family: sans-serif;
     color: var(--text);
     background: var(--bg-dark);
+    user-select: none;
+    -webkit-user-select: none;
 }
 
 .header{
@@ -186,4 +188,5 @@ body{
 
     z-index: 2;
 }
+
 
