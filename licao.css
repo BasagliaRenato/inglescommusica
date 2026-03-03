@@ -17,6 +17,8 @@ body{
     color: var(--text);
     margin: 0;
     overflow: hidden;
+    user-select: none;
+    -webkit-user-select: none;
 }
 .header{
     position: fixed;
@@ -194,3 +196,4 @@ body{
      box-shadow: 0 10px 25px rgba(0,0,0,0.75);
 
 }
+
