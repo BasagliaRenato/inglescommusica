@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" translate="no">
+<html lang="en"  translate="no">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -29,13 +29,45 @@
     <i class="fa-solid fa-play" style="font-size: 30px; rotate: 180deg;"></i>
 </button>
 <div>
-<div class="lesson-center">
+<div class="lesson-center" id="cover">
     <div id="image"></div>
 
-    <button class="btn-start">
+    <button class="btn-start"  onclick="irPara('intro')">
         Começar Lição <i class="fa-solid fa-play"></i>
     </button>
 </div>
+</div>
+<div id="intro" class="lesson-section">
+    <h2>Introdução</h2>
+    <div id="image-intro"></div>
+    <p id="intro-text"></p>
+
+    <button class="btn-start">
+        Começar Listening <i class="fa-solid fa-play"></i>
+    </button>
+</div>
+
+<div id="listening" class="lesson-section">
+    <h2>Listening</h2>
+    <p>Aqui vão as questões de listening</p>
+
+    <button class="btn-start" onclick="irPara('reading')">
+        Próxima Lição
+    </button>
+</div>
+
+<div id="reading" class="lesson-section">
+    <h2>Reading</h2>
+    <p>Aqui vai o reading</p>
+
+    <button class="btn-start" onclick="irPara('review')">
+        Revisão
+    </button>
+</div>
+
+<div id="review" class="lesson-section">
+    <h2>Review</h2>
+    <p>Revisão geral</p>
 </div>
 <footer class="footer">
         <div class="icons">
@@ -46,57 +78,6 @@
         </div>
     </footer>
 
-    <script>
-const params = new URLSearchParams(window.location.search);
-const id = params.get("id");
-
-const lessons = {
-    11: {
-        titulo: "Like I want you",
-        capitulo: "Giveon",
-        imagem: "images/likeiwantyou.jpg"
-    },
-    12: {
-        titulo: "Imagine",
-        capitulo: "John Lennon",
-        imagem: "images/imagine.jpg"
-    },
-    13: {
-        titulo: "Count on me",
-        capitulo: "Bruno Mars",
-        imagem: "images/countonme.jpg"
-    },
-    21: {
-        titulo: "White Ferrari",
-        capitulo: "Frank Ocean",
-        imagem: "images/whiteferrari.jpg"
-    },
-    22: {
-        titulo: "Me & U",
-        capitulo: "Tems",
-        imagem: "images/meandu.jpg"
-    },
-    23: {
-        titulo: "Come and See",
-        capitulo: "PARTYNEXTDOOR",
-        imagem: "images/comeandsee.jpg"
-    }
-};
-
-if (lessons[id]) {
-    document.getElementById("titulo").innerText = lessons[id].titulo;
-    document.getElementById("musica").innerText = lessons[id].capitulo;
-
-    document.getElementById("image").innerHTML = `
-        <img src="${lessons[id].imagem}" class="lesson-image">
-    `;
-}
-const menuButton = document.querySelector(".menu");
-
-menuButton.addEventListener("click", () => {
-    menuButton.classList.toggle("active");
-});
-</script>
+    <script src="licao.js" defer></script>
 </body>
-
 </html>

@@ -11,6 +11,11 @@
 --warning: #DD6E6E;
 --success: #74DD6E;
 }
+*{
+-webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+}
+
 body{
     font-family: sans-serif;
     background: var(--bg-dark);
@@ -187,6 +192,20 @@ body{
     justify-content: center;
     align-items: center;
 }
+#image-intro {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.intro-cover {
+    margin-top: 80px;
+    width: 140px;
+    height: 140px;
+    border-radius: 16px;
+    object-fit: cover;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+}
 
 .lesson-image{
     width: 200px;
@@ -194,6 +213,19 @@ body{
     border-radius: 20px;
     object-fit: cover;
      box-shadow: 0 10px 25px rgba(0,0,0,0.75);
-
+}
+.lesson-section {
+    display: none;
 }
 
+.lesson-section.active {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+#intro-text{
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
