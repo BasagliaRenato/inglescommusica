@@ -16,8 +16,20 @@ window.addEventListener("scroll", () => {
 
     headerTitle.textContent = currentChapter;
 });
-const menuButton = document.querySelector(".menu");
 
-menuButton.addEventListener("click", () => {
-    menuButton.classList.toggle("active");
+const menu = document.querySelector(".menu");
+const sideMenu = document.getElementById("side-menu");
+const overlay = document.getElementById("overlay");
+
+menu.addEventListener("click", () => {
+    sideMenu.classList.toggle("active");
+    overlay.classList.toggle("active");
+    menu.classList.toggle("active");
 });
+
+overlay.addEventListener("click", () => {
+    sideMenu.classList.remove("active");
+    overlay.classList.remove("active");
+    menu.classList.toggle("active");
+});
+
