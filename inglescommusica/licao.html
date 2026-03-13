@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en"  translate="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lição</title>
+    <link rel="stylesheet" href="licao.css">
+    <script src="https://kit.fontawesome.com/9bbeeced25.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+    <div class="top">
+        <img src="images/bandeira.webp" alt="us" id="flag">
+    </div>
+    <div class="bottom">
+        <div>
+        <h1 id="titulo">Capítulo</h1>
+        <b><p id="musica">Musica</p></b>
+        </div>
+        <div class="menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+</header>
+<div id="overlay"></div>
+
+<nav id="side-menu" class="side-menu">
+    <a href="icm.html">Início</a>
+    <a href="#">Capítulos</a>
+    <a href="#">Perfil</a>
+</nav>
+
+<button class="btn-voltar" onclick="history.back()">
+    <i class="fa-solid fa-play" style="font-size: 30px; rotate: 180deg;"></i>
+</button>
+<div>
+<div class="lesson-center" id="cover">
+    <div id="image"></div>
+
+    <button class="btn-start"  onclick="irPara('intro')">
+        Começar Lição <i class="fa-solid fa-play"></i>
+    </button>
+</div>
+</div>
+<div id="intro" class="lesson-section">
+    <h2>Introdução</h2>
+    <div id="image-intro"></div>
+    <p id="intro-text"></p>
+
+    <button class="btn-start">
+        Começar Listening <i class="fa-solid fa-play"></i>
+    </button>
+</div>
+
+<div id="listening" class="lesson-section">
+    <h2>Listening</h2>
+    <p>Aqui vão as questões de listening</p>
+
+    <button class="btn-start" onclick="irPara('reading')">
+        Próxima Lição
+    </button>
+</div>
+
+<div id="reading" class="lesson-section">
+    <h2>Reading</h2>
+    <p>Aqui vai o reading</p>
+
+    <button class="btn-start" onclick="irPara('review')">
+        Revisão
+    </button>
+</div>
+
+<div id="review" class="lesson-section">
+    <h2>Review</h2>
+    <p>Revisão geral</p>
+</div>
+<footer class="footer">
+        <div class="icons">
+
+           <a href="icm.html"> <i class="fa-solid fa-house" style="font-size: 30px;"></i> </a>      
+            <i class="fa-solid fa-user" style="font-size: 30px;"></i>
+            
+        </div>
+    </footer>
+
+    <script src="licao.js" defer></script>
+</body>
+</html>
